@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazprom Implementa Detectores de Metano Montados en Drones | VÖRNTEC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            text-align: center;
+            padding: 30px 0 40px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #764ba2;
+        }
+
+        .back-button::before {
+            content: '← ';
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #0066cc;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 10px;
+        }
+
+        .content {
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .content h2 {
+            font-size: 1.8em;
+            color: #0066cc;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .quote {
+            border-left: 4px solid #0066cc;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            font-style: normal;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .highlight-box {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #0066cc;
+        }
+
+        .highlight-box h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #eee;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .technical-specs {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .technical-specs h3 {
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .technical-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .technical-specs li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .technical-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .technical-specs strong {
+            color: #333;
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .logo {
+                max-width: 180px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                font-size: 1em;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <img src="vorntec-logo.png" alt="VÖRNTEC Logo" class="logo">
+        </div>
+
+        <a href="index.html" class="back-button">Volver a Casos de Estudio</a>
+        
+        <header>
+            <h1>Gazprom Implementa Detectores de Metano Montados en Drones</h1>
+            <div class="article-meta">
+                Caso de Estudio | Pergam-Engineering & CROC | Rusia, 2019
+            </div>
+        </header>
+
+        <main class="content">
+            <p>
+                Pergam-Engineering y CROC han desarrollado un sistema de software para el monitoreo de fugas en gasoductos de gas natural (metano) mediante el uso de vehículos aéreos no tripulados. Anteriormente, Pergam utilizaba helicópteros, automóviles y otros equipos para este propósito, lo cual era significativamente más costoso: por ejemplo, usar un helicóptero Mi-8 era aproximadamente diez veces más caro.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Reducción de costos vs. helicópteros</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2019</div>
+                    <div class="stat-label">Implementación comercial</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100m</div>
+                    <div class="stat-label">Altura máxima de operación</div>
+                </div>
+            </div>
+
+            <h2>Historia y Evolución del Sistema</h2>
+
+            <div class="image-placeholder">
+                image1
+            </div>
+
+            <p>
+                Un detector remoto de metano basado en láser fue fabricado por Pergam-Engineering en 2005. Después del vuelo de prueba, el modelo fue adquirido por la empresa Gazprom Transgaz Yekaterinburg. Desde entonces, Pergam-Engineering ha estado vendiendo detectores de metano en todo el mundo, con oficinas en Estados Unidos, Suiza e Italia. El detector puede cubrir una distancia de 40,000 kilómetros por año.
+            </p>
+
+            <div class="highlight-box">
+                <h3>¿Por qué es crítica la detección de metano?</h3>
+                <p>
+                    El metano es un gas incoloro e inodoro; sus fugas son dañinas para la salud humana y peligrosas: pueden provocar explosiones, incendios y pérdidas de materias primas. En 2018, 50 niños sufrieron intoxicación en Volokolamsk, región de Moscú, como resultado de una emisión de metano en un depósito de residuos local. Además, el metano produce un efecto invernadero que es 20 veces más fuerte que el efecto del dióxido de carbono.
+                </p>
+            </div>
+
+            <p>
+                Un detector de metano permite encontrar y neutralizar fugas de gas en gasoductos principales, estaciones de distribución de gas, vertederos, áreas residenciales donde las estufas de gas son alimentadas con metano, en buques tanque y en otras ubicaciones. Gazprom tiene una unidad de personal especial para detectar fugas de metano.
+            </p>
+
+            <h2>Cómo Funciona el Detector de Metano Tipo Láser</h2>
+
+            <p>
+                El rayo láser del dispositivo montado en helicóptero escanea el aire entre el helicóptero y el suelo durante el vuelo. En caso de que el rayo cruce metano, su espectro cambia; el dispositivo detecta y analiza la señal y muestra los parámetros de concentración de gas en una pantalla. El detector láser de metano DLS-Pergam montado en helicóptero puede medir la concentración de gas natural a una altura entre 30 y 200 metros.
+            </p>
+
+            <div class="technical-specs">
+                <h3>Capacidades del Sistema</h3>
+                <ul>
+                    <li><strong>Registro automático:</strong> Coordenadas GPS de la fuga</li>
+                    <li><strong>Datos contextuales:</strong> Hora, dirección del viento y distancia aire-tierra</li>
+                    <li><strong>Medición:</strong> Concentración de metano</li>
+                    <li><strong>Documentación:</strong> Fotografía y video automático</li>
+                    <li><strong>Análisis:</strong> Software DLS-Reporter para generación de informes</li>
+                    <li><strong>Exportación:</strong> Documentos Microsoft Word instantáneos</li>
+                </ul>
+            </div>
+
+            <h2>Transición a Drones: Reducción de Costos</h2>
+
+            <div class="image-placeholder">
+                image2
+            </div>
+
+            <p>
+                En 2017, Pergam creó un modelo más pequeño de su detector de metano y lo montó en un dron, lo que permite una considerable economización de gastos. Una hora de vuelo del Mi-8 con un detector cuesta aproximadamente 120,000 RUB ($1,906), mientras que una hora de vuelo de un dron DJI M600 cuesta 12,500 RUB.
+            </p>
+
+            <div class="quote">
+                "En 2018, cinco compañías afiliadas a Gazprom realizaron pruebas del detector de metano en vehículos aéreos no tripulados, y este año se lanzó el uso comercial."
+                <div class="quote-author">— Semyon Neverov, Jefe del Departamento de Desarrollo y Producción, Pergam-Engineering</div>
+            </div>
+
+            <p>
+                En su presentación, Neverov también mostró una carta firmada por Vyacheslav Mikhalenko, director de departamento en Gazprom, quien recomienda el uso comercial de detectores de metano montados en drones.
+            </p>
+
+            <h2>Especificaciones Técnicas del LMC G2 DL</h2>
+
+            <div class="technical-specs">
+                <h3>Detector de Metano LMC G2 DL de Segunda Generación</h3>
+                <ul>
+                    <li><strong>Velocidad de monitoreo:</strong> Hasta 100 m² por 5 minutos</li>
+                    <li><strong>Capacidad diaria:</strong> 4-5 estaciones de distribución de gas (5-10 km entre ellas)</li>
+                    <li><strong>Altura máxima:</strong> 100 m (óptima: 30 m)</li>
+                    <li><strong>Velocidad:</strong> Hasta 100 km/h</li>
+                    <li><strong>Tiempo de lanzamiento:</strong> 10 minutos</li>
+                    <li><strong>Temperatura operativa:</strong> -10°C a +40°C</li>
+                    <li><strong>Peso:</strong> 1.7 kg</li>
+                    <li><strong>Alimentación:</strong> Baterías del dron</li>
+                    <li><strong>Transmisión de datos:</strong> Hasta 5 km en tiempo real</li>
+                </ul>
+            </div>
+
+            <h2>Innovación: Transmisión de Datos en Tiempo Real</h2>
+
+            <p>
+                Anteriormente, Pergam tenía el detector de metano LMC que registraba datos a bordo pero no podía transmitirlos al suelo en línea y mostrarlos en el panel de control del operador. El complejo de hardware y software desarrollado por CROC incluye la opción de transmitir datos al suelo.
+            </p>
+
+            <div class="quote">
+                "Los clientes solían decir que era incómodo recibir datos al aterrizar; querían recibirlos instantáneamente para estar al tanto de lo que estaba sucediendo."
+                <div class="quote-author">— Semyon Neverov, Pergam-Engineering</div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Beneficios de la Transmisión en Tiempo Real</h3>
+                <p>
+                    La nueva función permite responder a la fuga tomando medidas para localizar y eliminarla con precisión, así como cambiar la asignación de vuelo y realizar otro enfoque para confirmar la fuga.
+                </p>
+            </div>
+
+            <h2>Integración de Software Avanzado</h2>
+
+            <p>
+                Junto con la compañía letona SPH Engineering, CROC ha desarrollado software para el LMC G2 DL que crea la asignación de vuelo y la ruta de vuelo, monitorea la situación en las instalaciones en modo en línea, y recibe y procesa datos del detector de metano. El software también proporciona la oportunidad de ingresar datos en una biblioteca: esto permite a los usuarios elegir una asignación de la biblioteca en lugar de tener que hacerla nuevamente cada vez.
+            </p>
+
+            <div class="image-placeholder">
+                image3
+            </div>
+
+            <h2>Competencia en el Mercado</h2>
+
+            <p>
+                Pergam-Engineering tiene dos competidores, las empresas estadounidenses ABB y ULC, que también fabrican sistemas de detección de fugas de gas montados en drones.
+            </p>
+
+            <section style="margin-top: 40px;">
+                <h2>Beneficios Clave de la Solución</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">90%</div>
+                        <div class="stat-label">Reducción de costos operativos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Real-time</div>
+                        <div class="stat-label">Transmisión de datos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">GPS</div>
+                        <div class="stat-label">Localización precisa</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5 km</div>
+                        <div class="stat-label">Alcance de transmisión</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Caso de estudio basado en la implementación de Pergam-Engineering, CROC y Gazprom</p>
+            <p style="margin-top: 10px; color: #999; font-size: 0.85em;">
+                Tecnología de detección de metano para un futuro más sostenible
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
