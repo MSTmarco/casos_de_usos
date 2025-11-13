@@ -83,15 +83,14 @@
         .case-image {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, #0A2463 0%, #3E92CC 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
             position: relative;
             overflow: hidden;
+        }
+
+        .case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .case-image::before {
@@ -101,11 +100,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.1);
-        }
-
-        .case-image span {
-            position: relative;
+            background: rgba(0,0,0,0.2);
             z-index: 1;
         }
 
@@ -206,7 +201,7 @@
             <!-- Caso 1: SkyeBase -->
             <a href="caso-skyebase.html" class="case-card">
                 <div class="case-image">
-                    <span>case-image-1</span>
+                    <img src="case-image-1.png" alt="SkyeBase UAV Methane Detection Belgium">
                 </div>
                 <div class="case-content">
                     <h2 class="case-title">Mediciones de Metano con UAV en Bélgica</h2>
@@ -226,7 +221,7 @@
             <!-- Caso 2: Gazprom -->
             <a href="caso-gazprom.html" class="case-card">
                 <div class="case-image">
-                    <span>case-image-2</span>
+                    <img src="case-image-2.png" alt="Gazprom Pergam Drone Methane Detector">
                 </div>
                 <div class="case-content">
                     <h2 class="case-title">Gazprom Implementa Detectores de Metano en Drones</h2>
