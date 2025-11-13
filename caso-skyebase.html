@@ -39,6 +39,23 @@
             display: inline-block;
         }
 
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #764ba2;
+        }
+
+        .back-button::before {
+            content: '← ';
+        }
+
         header {
             margin-bottom: 40px;
             padding-bottom: 20px;
@@ -139,6 +156,8 @@
         <div class="logo-section">
             <img src="vorntec-logo.png" alt="VÖRNTEC Logo" class="logo">
         </div>
+
+        <a href="index.html" class="back-button">Volver a Casos de Estudio</a>
         
         <header>
             <h1>SkyeBase y SPH Engineering reportan un caso de uso de mediciones de metano con UAV en Bélgica</h1>
@@ -153,7 +172,7 @@
             </p>
 
             <div class="image-placeholder">
-                image1
+                skyebase-image1
             </div>
 
             <p>
@@ -170,7 +189,7 @@
             </p>
 
             <div class="image-placeholder">
-                image2
+                skyebase-image2
             </div>
 
             <div class="quote">
